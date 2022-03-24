@@ -1,0 +1,18 @@
+{
+  "name": "01-band_names_server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "start:dev": "nodemon server.js"
+  },
+  "author": "Elí",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "socket.io": "^4.4.1"
+  }
+}
