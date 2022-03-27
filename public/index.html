@@ -22,10 +22,20 @@
 
       socket.emit('mensaje',{nombre:'eli'});
 
-      socket.on('mensaje',function(payload){
-        console.log('Escuchando: ', payload);
+      // socket.on('mensaje',function(payload){
+        // console.log('Escuchando: ', payload);
+      // });
+
+      //reicibimos dsde nuestro node el mensaje
+      socket.on('nuevo-mensaje',function(payload){
+        console.log('Escuchando mensaje desde flutter:',payload);
       });
-      
+
+      //obtemmos la lista de bandas desde nuestro node
+      socket.on('active-bands',function(bands){
+        console.clear();
+        console.table(bands);
+      });
     </script>
 </body>
 </html>
